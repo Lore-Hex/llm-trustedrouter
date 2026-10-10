@@ -1,0 +1,28 @@
+[project]
+name = "llm-trustedrouter"
+version = "0.1.0"
+description = "LLM plugin for models available through TrustedRouter"
+readme = "README.md"
+authors = [{name = "Joseph Perla"}]
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "llm>=0.27",
+    "httpx",
+]
+
+[project.urls]
+Homepage = "https://github.com/Lore-Hex/llm-trustedrouter"
+Changelog = "https://github.com/Lore-Hex/llm-trustedrouter/releases"
+Issues = "https://github.com/Lore-Hex/llm-trustedrouter/issues"
+CI = "https://github.com/Lore-Hex/llm-trustedrouter/actions"
+
+[project.entry-points.llm]
+trustedrouter = "llm_trustedrouter"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-httpx"]
